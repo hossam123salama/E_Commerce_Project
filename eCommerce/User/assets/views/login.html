@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Log in</title>
+  <link rel="stylesheet" href="../styles/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .login-card {
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 1.5rem;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .login-card h3 {
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+
+    .login-card p {
+      color: #6c757d;
+      text-align: center;
+    }
+
+    .login-card input {
+      height: 45px;
+      border-radius: 0.75rem;
+    }
+
+    .login-card button {
+      height: 45px;
+      border-radius: 0.75rem;
+      transition: all 0.3s ease;
+    }
+
+    .login-card button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .login-card .divider {
+      text-align: center;
+      margin: 1rem 0;
+      position: relative;
+    }
+
+    .login-card .divider::before,
+    .login-card .divider::after {
+      content: "";
+      height: 1px;
+      width: 40%;
+      background: #dee2e6;
+      position: absolute;
+      top: 50%;
+    }
+
+    .login-card .divider::before {
+      left: 0;
+    }
+
+    .login-card .divider::after {
+      right: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="login-card">
+    <form action="">
+      <h3>Welcome Back</h3>
+      <p>Log in to your account</p>
+
+      <div class="mb-3">
+        <input
+          id="loginEmail"
+          class="form-control"
+          type="text"
+          placeholder="Email or Phone Number"
+          required
+        />
+      </div>
+
+      <div class="mb-3">
+        <input
+          id="loginPassword"
+          class="form-control"
+          type="password"
+          placeholder="Password"
+          required
+        />
+      </div>
+
+      <div class="d-grid gap-2 mb-2">
+        <button id="loginBtn" type="submit" class="btn btn-danger text-white">
+          Log in
+        </button>
+      </div>
+
+      <div class="text-end mb-3">
+        <a class="loginLink link-primary small" href="#">Forgot password?</a>
+      </div>
+
+      <div class="divider">or</div>
+
+      <div class="d-grid gap-2 mb-3">
+        <button id="loginWithGoogleBtn" class="btn btn-outline-dark">
+          <i class="fa-brands fa-google me-2"></i> Log in with Google
+        </button>
+      </div>
+
+      <p class="text-center small">
+        Don't have an account?
+        <a class="loginLink link-primary" href="./registration.html">Sign Up</a>
+      </p>
+    </form>
+  </div>
+
+  <script type="module" src="/User/assets/js/firebase/login.js" defer></script>
+  <script src="/User/assets/styles/bootstrap-5.3.3-dist/js/bootstrap.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>

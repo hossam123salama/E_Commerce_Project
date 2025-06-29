@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>User Profile</title>
+  <link rel="stylesheet" href="../styles/bootstrap-5.3.3-dist/css/bootstrap.min.css"> 
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: #f8f9fa;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .profile-card {
+      background: white;
+      padding: 50px 40px;
+      border-radius: 25px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      max-width: 450px;
+      width: 100%;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .profile-icon {
+      width: 120px;
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      transition: transform 0.3s;
+    }
+
+    .profile-icon:hover {
+      transform: scale(1.05);
+    }
+
+    .user-name {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #343a40;
+    }
+
+    .user-email {
+      font-size: 18px;
+      color: #6c757d;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 576px) {
+      .profile-card {
+        padding: 30px 20px;
+      }
+
+      .profile-icon {
+        width: 90px;
+        height: 90px;
+        font-size: 36px;
+      }
+
+      .user-name {
+        font-size: 22px;
+      }
+
+      .user-email {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="profile-card">
+  <div class="profile-icon"><img src="../../resources/images/profile.jfif.jpg" width="100%"></div>
+  <div id="userName" class="user-name"></div>
+  <div id= "useremail" class="user-email"></div>
+</div>
+<script>    
+    var CurrentUserEmail=localStorage.getItem("userEmail");
+    var CurrentUserName=localStorage.getItem("userName");
+    document.getElementById("userName").textContent=CurrentUserName;
+    document.getElementById("useremail").textContent=CurrentUserEmail;
+</script>
+</body>
+</html>

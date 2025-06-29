@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registration</title>
+
+  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/6.0.1/firebase-ui-auth.css" />
+  <link rel="stylesheet" href="../styles/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+  
+  <style>
+    body {
+      background-color: #f8f9fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .register-card {
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 1.5rem;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .register-card h3 {
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .register-card p {
+      text-align: center;
+      color: #6c757d;
+      margin-bottom: 1.5rem;
+    }
+
+    .register-card input {
+      height: 45px;
+      border-radius: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .register-card button {
+      height: 45px;
+      border-radius: 0.75rem;
+      transition: all 0.3s ease;
+    }
+
+    .register-card button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .register-card .google-btn {
+      background: white;
+      border: 1px solid #dee2e6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .register-card .google-btn img {
+      width: 22px;
+      margin-right: 8px;
+    }
+
+    .register-card .text-center a {
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="register-card">
+    <form action="">
+      <h3>Create an Account</h3>
+      <p>Enter your details below</p>
+
+      <input
+        id="registerName"
+        class="form-control"
+        type="text"
+        placeholder="Name"
+        required
+        minlength="3"
+      />
+
+      <input
+        id="registerEmail"
+        class="form-control"
+        type="text"
+        placeholder="Email or Phone Number"
+        required
+      />
+
+      <input
+        id="registerPassword"
+        class="form-control"
+        type="password"
+        placeholder="Password"
+        required
+      />
+
+      <div class="d-grid gap-2 mb-3">
+        <button
+          id="registerBtn"
+          type="submit"
+          class="btn btn-danger text-white"
+        >
+          Create Account
+        </button>
+      </div>
+
+      <div class="d-grid gap-2 mb-3">
+        <button id="registerWithGoogleBtn" type="button" class="google-btn btn">
+          <img src="../../resources/images/google.png" alt="Google Logo" />
+          Sign up with Google
+        </button>
+      </div>
+
+      <p class="text-center small">
+        Already have an account?
+        <a class="loginLink link-primary" href="./login.html">Log in</a>
+      </p>
+    </form>
+  </div>
+
+  <script type="module" src="/User/assets/js/firebase/register.js" defer></script>
+  <script src="/User/assets/styles/bootstrap-5.3.3-dist/js/bootstrap.js"></script>
+</body>
+</html>

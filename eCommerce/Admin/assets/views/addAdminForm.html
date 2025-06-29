@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/Admin/assets/styles/css/addAdminForm.css" />
+    <title>Add Admins</title>
+  </head>
+  <body>
+    <div class="form-container">
+      <form class="admin-form" id="adminForm">
+        <h2>Add Admin</h2>
+
+        <!-- Admin Name -->
+        <div class="form-group">
+          <label for="adminName">Admin Name</label>
+          <input type="text" id="adminName" name="adminName" required />
+        </div>
+
+        <!-- Admin Email -->
+        <div class="form-group">
+          <label for="adminEmail">Admin Email</label>
+          <input
+            type="text"
+            id="adminEmail"
+            name="adminEmail"
+            required
+          />
+        </div>
+
+        <!-- admin Image -->
+        <div class="form-group">
+          <label for="adminPass">Admin PassWord</label>
+          <input type="password" id="adminPass" name="adminPass" required />
+        </div>
+
+        <!-- admin Price -->
+        <div class="form-group">
+          <label for="adminConfirmPass">Confirm Password</label>
+          <input
+            type="password"
+            id="adminConfirmPass"
+            name="adminConfirmPass"
+            required
+          />
+        </div>
+
+        <!-- Error message -->
+        <div class="error" id="errorMessage"></div>
+
+        <!-- Submit Button -->
+        <button type="submit" id="submitBtn">Add Admin</button>
+      </form>
+    </div>
+
+    <script>
+        
+
+        adminForm.addEventListener("click", function (event) {
+        
+            event.preventDefault();
+
+        
+        });
+
+    </script>
+    <!-- JS For Firebase -->
+    <script type="module" src="/Admin/assets/js/firebase/adminData.js"></script>
+  </body>
+</html>

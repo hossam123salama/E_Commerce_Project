@@ -1,0 +1,290 @@
+
+.top-bar {
+    background: #000;
+    color: #fff;
+    padding: 10px 5%;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.top-bar a {
+    color: #e02525;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 5px;
+}
+.loginLink{
+    text-decoration: none;
+    color: black;
+}
+
+footer a{
+    /* display: inline-block; */
+    /* background-color: beige; */
+    text-decoration: none;
+    color: white;
+}
+footer{
+    margin-top: 150px;
+}
+._footer{
+    height: 300px;
+    padding-top: 60px;
+}
+.sasa{
+    padding-left: 200px;
+}
+ul li{
+    padding-left: 8px;
+}
+.myNav {
+    position: sticky;
+    top: 0;
+    text-align: center;
+    width: 100%;
+    z-index: 1000;
+}
+.sidebar ul {
+    list-style: none;
+}
+.sidebar li{
+    padding: 12px 0;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    transition: color 0.3s;
+}
+.sidebar li a{
+    text-decoration: none;
+    color: black;
+
+}
+.sidebar li a:hover {
+    color:beige;
+}
+
+.sidebar li i {
+    font-size: 12px;
+}
+.divButton1{
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-100%, -50%);
+    background: rgba(0, 0, 0, 0.6); /* لون شفاف للزر */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+.divButton2{
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(0%, -50%);
+    background: rgba(0, 0, 0, 0.6); 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+.divButton1:hover{
+    background-color: beige;
+}
+.divButton2:hover{
+    background-color: beige;
+}
+/* //////////////////////!flash sale */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.slider-container {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 10px;
+}
+
+.slide {
+    min-width: 300px;
+    border:beige solid;
+    text-align: center;
+    height: 400px;
+    background-color:  #fff;
+    color: black;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    border-radius: 10px;
+}
+.slide:hover{
+    transform: scale(1.02);
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    z-index: 50;
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.arrow-left { left: 10px; }
+.arrow-right { right: 10px; }
+
+.arrow:hover {
+    background-color: beige;
+}
+/* /////////////////////////////////////// */
+/* //!flash sale */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+}
+
+.container-Section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.title-Section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+/*start Section Flash sales*/
+
+.container-Section h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0;
+    color: #222;
+}
+
+.Section-badge {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+   
+}
+
+.countdown {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.countdown-item {
+    text-align: center;
+}
+
+.countdown-item span {
+    display: block;
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.countdown-value {
+    background: #ff4d4d;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 18px;
+    min-width: 50px;
+}
+
+/* /////////////////////////////////////// */
+.badge {
+    position: absolute;
+    top: -15px;
+    right: -8px;
+    background: red;
+    color: white;
+    font-size: 14px;
+    padding: 5px 8px;
+    border-radius: 50%;
+    min-width: 20px;
+    max-width: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+/* user log out and orders in navbar */
+.orders_and_Logout{
+    position: relative;
+    display: inline-block;
+}
+.dropDownList{
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: -30px;
+    background-color: white;
+    border: 1px solid #ccc;
+    min-width: 150px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    z-index: 100;
+}
+
+.dropDownList a {
+    width: 100%;
+    display: block;
+    padding: 10px;
+    border: none;
+    background: none;
+    text-align: left;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+  }
+
+  .dropDownList a:hover {
+    background-color: #f2f2f2;
+  }
+  
+  .orders_and_Logout:hover .dropDownList {
+    display: block;
+  }

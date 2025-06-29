@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/Admin/assets/styles/bootstrap-5.3.3-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/Admin/assets/styles/css/dashboard.css" />
+    <style>
+      .navbar-nav .nav-item .active {
+          color: blue !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <!--NavBar-->
+        <nav class="navbar navbar-expand-lg">
+          <!--Left Side Navbar-->
+          <div class="container-fluid">
+            <div class="col-3">
+              <a class="navbar-brand" href="#">
+                <img
+                  width="100"
+                  height="100"
+                  src="https://img.icons8.com/bubbles/100/user.png"
+                  alt="user"
+                />
+                <b id="adminName">Admin-Name</b>
+                
+              </a>
+            </div>
+
+            <!--Toggler Bar-->
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <!--NavBar Right Side--> 
+            <div class="col-5 leftNav collapse navbar-collapse" id="navbarNav">
+              <div>
+                <button class="btn btn-primary addProductBtn">
+                  <i class="fa-solid fa-plus"></i>
+                  <a href="/Admin/assets/views/addProductForm.html">
+                    Add Product</a
+                  >
+               </button>
+                <button class="btn btn-primary updateProductBtn">
+                  <i class="fa-solid fa-plus"></i>
+                  <a href="/Admin/assets/views/addAdminForm.html"> Add Admin</a>
+               </button>
+        <!-- @todo: remove this button -->
+                <!-- <button class="btn btn-primary updateProductBtn">
+                  <i class="fa-solid fa-plus"></i>
+                  <a href="" id="createOrderBtn"> Create Order</a>
+                </button> -->
+              </div>
+            </div>
+          </div>
+        </nav>
+        <!--Main Content-->
+        <div class="row">
+          <!-- Sidebar-->
+          <div class="dashboard-List col-3 col-lg-2 p-1 d-lg-block bg-light">
+            <section>
+              <a href="home" id="home" class="nav-link" data-section="home"><i class="fa-solid fa-house"></i> Home</a>
+            </section>
+            <section>
+              <a href="products" id="products" class="nav-link" data-section="products"><i class="fa-brands fa-product-hunt"></i> Products</a>
+            </section>
+            <section>
+              <a href="categories" id="categories" class="nav-link" data-section="categories"><i class="fa-solid fa-layer-group"></i> Categories</a>
+            </section>
+            <section>
+              <a href="orders" id="orders" class="nav-link" data-section="orders"><i class="fa-solid fa-truck"></i> Orders</a>
+            </section>
+            <!--Logout buttons-->
+            <hr>
+            <section>
+              <a href=""><i class="fa-solid fa-question"></i> Help</a>
+            </section>
+            <section>
+              <a href="" id="logoutBtn"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+            </section>
+          </div>
+          <div class="dashboard-container col-9 col-lg-10 p-1">
+            <div id="page-content">Dashboard</div> <!-- This element must exist -->
+        </div>        
+        </div>
+      </div>
+    </div>
+
+    <script src="../styles/bootstrap-5.3.3-dist/js/bootstrap.js"></script>
+    <!-- JS For Firebase -->
+    <script type="module" src="../js/firebase/orders.js"></script>
+    <script type="module" src="../js/firebase/product.js"></script>
+    <script type="module" src="../js/firebase/categories.js"></script>
+    <script type="module" src="../js/firebase/adminData.js"></script>
+    <script type="module" src="../js/firebase/home.js"></script>
+    
+  </body>
+</html>

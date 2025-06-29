@@ -1,0 +1,132 @@
+.brand-name {
+  font-size: 30px;
+}
+.search-bar {
+  width: 100%;
+  margin-top: 20px;
+}
+.search-bar > input {
+  width: 300px;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--bs-body-color);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: var(--bs-body-bg);
+  background-clip: padding-box;
+  border: var(--bs-border-width) solid var(--bs-border-color);
+  border-radius: var(--bs-border-radius);
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.buttons {
+  margin-left: 500px;
+}
+.leftNav {
+  display: flex;
+  justify-items: center;
+  justify-content: space-around;
+  font-size: 20px;
+}
+.leftNav > div {
+  margin-left: 50px;
+}
+
+/*Side bar*/
+.dashboard-List > section {
+  padding: 10px;
+}
+
+.dashboard-List > section:hover {
+  background-color: rgb(223, 219, 219);
+  cursor: pointer;
+}
+.dashboard-List > section > a {
+  text-decoration: none;
+  color: grey;
+}
+.dashboard-List > section > a > i {
+  font-size: 30px;
+  padding: 10px;
+  color: grey;
+}
+
+/* Overview */
+.dashboard-container {
+  background-color: #f6f6f6;
+}
+.overview-container,
+.total-income-container {
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.overview,
+.total-income {
+  width: 100%;
+  justify-content: space-between;
+}
+.list-items {
+  border-radius: 10px;
+  border: none;
+  background-color: #f1f0f0;
+  width: 20%;
+  padding-left: 10px;
+  cursor: pointer;
+}
+
+/* customer & income section*/
+.customers-incomes {
+  background-color: #f1f0f0;
+  padding: 10px;
+  justify-content: center;
+  margin: 20px;
+  border-radius: 10px;
+}
+.customers,
+.incomes {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 10px;
+}
+.customers:hover,
+.incomes:hover {
+  background-color: #fff;
+}
+.customer-percentage {
+  color: green;
+  border-radius: 50%;
+  padding: 5px;
+  background-color: rgb(189, 247, 243);
+}
+/*Admins*/
+.welcome-admins {
+  margin-left: 20px;
+}
+.admins-Images > section {
+  text-align: center;
+}
+.admins-Images > section > span {
+  display: block;
+}
+
+/*SideBar for main content (dashboard)*/
+.popular-products,.comments-section{
+  background-color: #fff;
+  margin-top: 10px;
+  padding: 20px;
+  border-radius: 10px;
+}
+.product,.type{
+  font-size: 15px;
+  line-height: 10px;
+}
+.addProductBtn>a,.updateProductBtn>a{
+  text-decoration: none;
+  color: #fff;
+}

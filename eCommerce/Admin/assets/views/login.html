@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Log in</title>
+  <link rel="stylesheet" href="/Admin/assets/styles/bootstrap-5.3.3-dist/css/bootstrap.css" />
+  <style>
+    body {
+      background-color: #f8f9fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .login-card {
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 1.5rem;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .login-card h3 {
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .login-card p {
+      text-align: center;
+      color: #6c757d;
+      margin-bottom: 1.5rem;
+    }
+
+    .login-card input {
+      height: 45px;
+      border-radius: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .login-card button {
+      height: 45px;
+      border-radius: 0.75rem;
+      transition: all 0.3s ease;
+    }
+
+    .login-card button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .login-card .text-end a {
+      font-size: 0.875rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="login-card">
+    <form action="">
+      <h3>Admin Login</h3>
+      <p>Enter your credentials below</p>
+
+      <input
+        class="form-control"
+        type="text"
+        id="loginEmail"
+        placeholder="Email"
+        required
+      />
+
+      <input
+        class="form-control"
+        type="password"
+        id="loginPassword"
+        placeholder="Password"
+        required
+      />
+
+      <div class="d-grid gap-2 mb-3">
+        <button type="submit" id="loginBtn" class="btn btn-danger text-white">
+          Log in
+        </button>
+      </div>
+
+      <div class="text-end">
+        <a class="loginLink link-primary" href="#">Forgot password?</a>
+      </div>
+    </form>
+  </div>
+
+  <script src="/Admin/assets/styles/bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+  <script type="module" src="/Admin/assets/js/firebase/login.js"></script>
+</body>
+</html>
